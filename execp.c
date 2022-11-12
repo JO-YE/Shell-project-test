@@ -11,7 +11,7 @@
 int main(__attribute__((unused))int argc, __attribute__((unused))char **argv)
 {
 	char *arglist[3];
-	arglist[0] = "/usr/bin/cat";
+	arglist[0] = "/usr/bin/vi";
 	arglist[1] = "split.c";
 	arglist[2] = NULL;
 
