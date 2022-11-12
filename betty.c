@@ -2,11 +2,11 @@
 #include <unistd.h>
 
 /*
-* main - prints its name followed by a new line
+* main - a function prints its name followed by a new line
 * @ac: argument count
 * @av: argument vector
 *
-* Return: always 0
+* @Return: always 0
 */
 int main(__attribute__((unused))int ac, __attribute__((unused)) char **av)
 {

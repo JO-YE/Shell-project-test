@@ -3,9 +3,9 @@
 #include <stdlib.h>
 
 /**
-* str_brk - a fnx that split a string
-* main - returns token
-* Returns: Alway 0
+* main - a function that split a string
+*
+* Returns: Always 0
 */
 int main(void)
 {
