@@ -24,3 +24,11 @@ int main(__attribute__((unused))int argc, __attribute__((unused))char **argv)
 	}
 	return (0);
 }
+
+/** 
+* Complied this program into 3 different result
+* the first only listed the files
+* the second one cat the split.c file
+* the third vi split.c
+* it can be ran using ./(complied name)
+*/

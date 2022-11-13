@@ -23,7 +23,7 @@ int main(void)
 	numarg = 0;
 	while (numarg < MAXARGS)
 	{
-		printf("Arg[%d]:", numarg);
+		printf("Arg[%d]:  ", numarg);
 		if (fgets(argbuf, ARGLEN, stdin) && *argbuf != '\n')
 			arglist[numarg++] = makestring(argbuf);
 		else
@@ -62,8 +62,8 @@ int execute(char *arglist[])
 char *makestring(char *buf)
 {
 	char *copy;
-	copy = malloc(2);
-
+	copy = malloc(2); 
+/** added a random number to the bracket to solve the malloc error**/
 	buf[strlen(buf) - 1] = '\0';
 	copy = malloc(strlen(buf) + 1);
 	if (copy == NULL)
@@ -75,4 +75,7 @@ char *makestring(char *buf)
 	return copy;
 }
 
-/** code didnt produce the desired result **/
+/** code worked. But still needs to look up on malloc issues**/
+/** Complied this program to give 2 diff result **/
+/** the first one will print arg(): while the second **/
+/** print only $. both will need for the user to pree Ctrl d**/
