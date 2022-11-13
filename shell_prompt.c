@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include "main.h"
 #include <signal.h>
+#include <unistd.h>
 
 #define MAXARGS 20
 #define ARGLEN 100
@@ -23,7 +24,7 @@ int main(void)
 	while (numarg < MAXARGS)
 	{
 		printf("Arg[%d]:", numarg);
-		if (getline(argbuf, ARGLEN, stdin) && *argbuf != '\n')
+		if (fgets(argbuf, ARGLEN, stdin) && *argbuf != '\n')
 			arglist[numarg++] = makestring(argbuf);
 		else
 		{
@@ -37,3 +38,41 @@ int main(void)
 	}
 	return (0);
 }
+
+/**
+* execute - executing the program using execvp
+* @arglist: argument list
+*
+* Return: always 0
+*/
+int execute(char *arglist[])
+{
+	execvp(arglist[0], arglist);
+	perror("refuse to run ");
+	exit(EXIT_SUCCESS);
+}
+
+/**
+* makestring - a function that trim off new line and create
+* storage for the string
+* @buf: a temporary wtorage area
+*
+* Return: always 0
+*/
+char *makestring(char *buf)
+{
+	char *copy;
+	copy = malloc(2);
+
+	buf[strlen(buf) - 1] = '\0';
+	copy = malloc(strlen(buf) + 1);
+	if (copy == NULL)
+	{
+		fprintf(stderr, "no memory\n");
+		exit(EXIT_SUCCESS);
+	}
+	strcpy(copy, buf);
+	return copy;
+}
+
+/** code didnt produce the desired result **/
