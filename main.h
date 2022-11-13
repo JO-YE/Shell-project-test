@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-int main(char *name);
+int execute (char *arglist[]);
+char *makestring(char *buf);
 
 #endif
