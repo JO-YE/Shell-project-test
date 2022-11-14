@@ -14,5 +14,5 @@ int main(int argc, char **argv)
 
 	for (index = 0; index < argc; index++)
 		printf("arg[%d]: %s\n", index, argv[index]);
-	exit (EXIT_SUCCESS);
+	exit(EXIT_SUCCESS);
 }
