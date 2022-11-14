@@ -31,4 +31,4 @@ int main(__attribute__((unused))int argc, __attribute__((unused))char **argv)
 * the second one cat the split.c file
 * the third vi split.c
 * it can be ran using ./(complied name)
-* Refer to EXECVE.C file for more example and information*/
+* Refer to EXECVE.C and EXECTEST.C  file for more example and information*/

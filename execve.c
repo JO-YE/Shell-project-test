@@ -31,4 +31,5 @@ int main(int argc, char **argv)
 * Null must alway end the argument otherwise execve will give Bad address
  * The major different btw this code and the one is execp.c is;
  * This code has the ability to run other programs that are not in this current code
- * while execp.c only ran the particular instruction given in the code*/
+ * while execp.c only ran the particular instruction given in the code
+ * check exectest.c file for more information */
